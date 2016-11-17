@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB8DA7C17CCC5591ABB0D852 /* Pods_AFSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C60FFA0E2FE1B9EBC27BA3E /* Pods_AFSample.framework */; };
 		D1D9ACDE1DDD9E3000B8A566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9ACDD1DDD9E3000B8A566 /* AppDelegate.swift */; };
 		D1D9ACE01DDD9E3000B8A566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9ACDF1DDD9E3000B8A566 /* ViewController.swift */; };
 		D1D9ACE31DDD9E3000B8A566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D9ACE11DDD9E3000B8A566 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A435EEBD1931F5120875935 /* Pods-AFSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFSample/Pods-AFSample.release.xcconfig"; sourceTree = "<group>"; };
+		7A899418BA1531452880997D /* Pods-AFSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFSample/Pods-AFSample.debug.xcconfig"; sourceTree = "<group>"; };
+		8C60FFA0E2FE1B9EBC27BA3E /* Pods_AFSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D9ACDA1DDD9E3000B8A566 /* AFSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D9ACDD1DDD9E3000B8A566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D9ACDF1DDD9E3000B8A566 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8DA7C17CCC5591ABB0D852 /* Pods_AFSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A959DED5EEE16B2F2D0B8908 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C60FFA0E2FE1B9EBC27BA3E /* Pods_AFSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACCB40DF56A2CB635B3F0C03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A899418BA1531452880997D /* Pods-AFSample.debug.xcconfig */,
+				0A435EEBD1931F5120875935 /* Pods-AFSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D1D9ACD11DDD9E3000B8A566 = {
 			isa = PBXGroup;
 			children = (
 				D1D9ACDC1DDD9E3000B8A566 /* AFSample */,
 				D1D9ACDB1DDD9E3000B8A566 /* Products */,
+				ACCB40DF56A2CB635B3F0C03 /* Pods */,
+				A959DED5EEE16B2F2D0B8908 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1D9ACEC1DDD9E3000B8A566 /* Build configuration list for PBXNativeTarget "AFSample" */;
 			buildPhases = (
+				00426D39685F14EAE188F958 /* [CP] Check Pods Manifest.lock */,
 				D1D9ACD61DDD9E3000B8A566 /* Sources */,
 				D1D9ACD71DDD9E3000B8A566 /* Frameworks */,
 				D1D9ACD81DDD9E3000B8A566 /* Resources */,
+				2795AA0D71769C95CC3E891B /* [CP] Embed Pods Frameworks */,
+				1B230818FC3C16D03367400D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00426D39685F14EAE188F958 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1B230818FC3C16D03367400D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFSample/Pods-AFSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2795AA0D71769C95CC3E891B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFSample/Pods-AFSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1D9ACD61DDD9E3000B8A566 /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		D1D9ACED1DDD9E3000B8A566 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A899418BA1531452880997D /* Pods-AFSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 859LK3T2WH;
@@ -270,6 +346,7 @@
 		};
 		D1D9ACEE1DDD9E3000B8A566 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A435EEBD1931F5120875935 /* Pods-AFSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 859LK3T2WH;
