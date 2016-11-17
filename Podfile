@@ -7,5 +7,6 @@ target 'AFSample' do
 
   # Pods for AFSample
   pod 'Alamofire', '~> 4.0'
-
+  pod 'AlamofireImage', '~> 3.1'
+  
 end
